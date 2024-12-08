@@ -9,8 +9,10 @@
     let Form: HTMLFormElement | null = $state(null);
     let Input: HTMLInputElement | null = $state(null);
 
-    function onchange(x: number, y: number, color: COLORS) {
-        colorGrid[x][y] = color;
+    function onchange(coords: {x: number, y: number}[], color: COLORS) {
+        for (const coord of coords) {
+            colorGrid[coord.x][coord.y] = color;
+        }
     }
 
     function onsave() {

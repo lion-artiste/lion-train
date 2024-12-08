@@ -11,7 +11,7 @@
     interface Props {
         colorGrid: ColorGrid;
         size?: number;
-        onchange?: (x: number, y: number, color: COLORS) => void;
+        onchange?: (coords: {x: number, y: number}[], color: COLORS) => void;
         onsave?: () => void;
         onreset?: () => void;
     }
@@ -60,7 +60,7 @@
                         for (let x = 0; x < grid.length; x++) {
                             let row = grid[x];
                             for (let y = 0; y < row.length; y++) {
-                                onchange?.(x, y, row[y])
+                                onchange?.([{x, y}], row[y])
                             }
                         }
                     }}><GameFont>{el.name}</GameFont></TextButton>
