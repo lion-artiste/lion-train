@@ -7,8 +7,10 @@ node_modules/
 /build
 /.svelte-kit
 /media/**/*
+/.github
 
 .DS_Store
+deploy.sh
 
 # dotenv environment variable files
 .env
