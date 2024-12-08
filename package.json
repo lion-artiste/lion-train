@@ -1,7 +1,7 @@
 {
   "name": "lion-train",
   "version": "0.6.1",
-  "private": true,
+  "private": false,
   "scripts": {
     "dev": "vite dev",
     "build": "vite build",
