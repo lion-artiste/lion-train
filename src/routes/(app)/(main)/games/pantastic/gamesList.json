@@ -1,0 +1,203 @@
+[
+    {
+        "name": "Big Boosty",
+        "id": "big-boosty",
+        "description": "Find the boosted frequency !",
+        "main_color": "2 97 206",
+        "secondary_color": "5 52 138",
+        "light_color": "197 230 255",
+        "parameters": {
+            "nb_games": {
+                "name": "Number of games",
+                "description": "The number of games you'd like to play in your serie",
+                "type": "integer",
+                "unit": "",
+                "min": 3,
+                "max": 200,
+                "default": 10
+            },
+            "min_freq": {
+                "name": "Min Frequency",
+                "description": "The minimum frequency boostable",
+                "type": "integer",
+                "unit": "Hz",
+                "min": 30,
+                "max": 200,
+                "default": 60
+            },
+            "max_freq": {
+                "name": "Max Frequency",
+                "description": "The maximum frequency boostable",
+                "type": "integer",
+                "unit": "Hz",
+                "min": 100,
+                "max": 17000,
+                "default": 15000
+            },
+            "w_begin": {
+                "name": "Start window width",
+                "description": "The width of the guessing window at the beginning of the serie, in percent of the total width",
+                "type": "integer",
+                "unit": "%",
+                "min": 10,
+                "max": 90,
+                "default": 60
+            },
+            "w_end": {
+                "name": "End window width",
+                "description": "The width of the guessing window at the end of the serie, in percent of the total width",
+                "type": "integer",
+                "unit": "%",
+                "min": 10,
+                "max": 90,
+                "default": 20
+            },
+            "gain": {
+                "name": "Boost gain",
+                "description": "The increase of volume of the boosts",
+                "type": "float",
+                "unit": "dB",
+                "min": 0.5,
+                "max": 20,
+                "default": 10.0
+            },
+            "q": {
+                "name": "Q value",
+                "description": "The Q value of the boosts (higher value = more focused)",
+                "type": "float",
+                "unit": "",
+                "min": 0.3,
+                "max": 20.0,
+                "default": 1.5
+            }
+        }
+    },
+    {
+        "name": "What The Cut",
+        "id": "what-the-cut",
+        "description": "Find the attenuated frequency !",
+        "main_color": "8 149 96",
+        "secondary_color": "1 83 59",
+        "light_color": "197 255 219",
+        "parameters": {
+            "nb_games": {
+                "name": "Number of games",
+                "description": "The number of games you'd like to play in your serie",
+                "type": "integer",
+                "unit": "",
+                "min": 3,
+                "max": 200,
+                "default": 10
+            },
+            "min_freq": {
+                "name": "Min Frequency",
+                "description": "The minimum frequency boostable",
+                "type": "integer",
+                "unit": "Hz",
+                "min": 30,
+                "max": 200,
+                "default": 60
+            },
+            "max_freq": {
+                "name": "Max Frequency",
+                "description": "The maximum frequency boostable",
+                "type": "integer",
+                "unit": "Hz",
+                "min": 100,
+                "max": 17000,
+                "default": 15000
+            },
+            "w_begin": {
+                "name": "Start window width",
+                "description": "The width of the guessing window at the beginning of the serie, in percent of the total width",
+                "type": "integer",
+                "unit": "%",
+                "min": 10,
+                "max": 90,
+                "default": 60
+            },
+            "w_end": {
+                "name": "End window width",
+                "description": "The width of the guessing window at the end of the serie, in percent of the total width",
+                "type": "integer",
+                "unit": "%",
+                "min": 10,
+                "max": 90,
+                "default": 20
+            },
+            "gain": {
+                "name": "Boost gain",
+                "description": "The increase of volume of the boosts",
+                "type": "float",
+                "unit": "dB",
+                "min": 0.5,
+                "max": 20,
+                "default": 10.0
+            },
+            "q": {
+                "name": "Q value",
+                "description": "The Q value of the boosts (higher value = more focused)",
+                "type": "float",
+                "unit": "",
+                "min": 0.3,
+                "max": 20.0,
+                "default": 1.5
+            }
+        }
+    },
+    {
+        "name": "Pantastic",
+        "id": "pantastic",
+        "description": "Find where the sound is panned in the audio spectrum",
+        "main_color": "155 49 49",
+        "secondary_color": "89 32 32",
+        "light_color": "245 214 214",
+        "parameters": {
+            "nb_games": {
+                "name": "Number of games",
+                "description": "The number of games you'd like to play in your serie",
+                "type": "integer",
+                "unit": "",
+                "min": 3,
+                "max": 200,
+                "default": 10
+            },
+            "min_pan": {
+                "name": "Min Pan",
+                "description": "The minimum pan value (-100 = left, 100 = right)",
+                "type": "integer",
+                "unit": "%",
+                "min": -95,
+                "max": 0,
+                "default": -95
+            },
+            "max_pan": {
+                "name": "Max Pan",
+                "description": "The maximum pan value (-100 = left, 100 = right)",
+                "type": "integer",
+                "unit": "%",
+                "min": 0,
+                "max": 95,
+                "default": 95
+            },
+            "w_begin": {
+                "name": "Start window width",
+                "description": "The width of the guessing window at the beginning of the serie, in percent of the total width",
+                "type": "integer",
+                "unit": "%",
+                "min": 10,
+                "max": 90,
+                "default": 60
+            },
+            "w_end": {
+                "name": "End window width",
+                "description": "The width of the guessing window at the end of the serie, in percent of the total width",
+                "type": "integer",
+                "unit": "%",
+                "min": 10,
+                "max": 90,
+                "default": 20
+            }
+        }
+    }
+]

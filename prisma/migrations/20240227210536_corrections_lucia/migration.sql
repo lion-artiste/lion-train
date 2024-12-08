@@ -1,0 +1,2 @@
+-- AlterTable
+/*ALTER TABLE `User` ADD COLUMN `date_signup` DATETIME(3) NULL DEFAULT CURRENT_TIMESTAMP(3);*/

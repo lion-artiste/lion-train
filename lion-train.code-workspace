@@ -1,0 +1,30 @@
+{
+	"folders": [
+		{
+			"path": "."
+		}
+	],
+	"settings": {
+		"workbench.editor.labelFormat": "short",
+		"explorer.sortOrder": "filesFirst",
+		"explorer.compactFolders": false,
+		"material-icon-theme.activeIconPack": "angular",
+		"material-icon-theme.folders.color": "#43a047",
+		"workbench.tree.indent": 14,
+		"explorer.fileNesting.enabled": true,
+		"explorer.fileNesting.patterns": {
+			"package.json": "package-lock.json, yarn.lock, pnpm-lock.yaml, playwright.config.ts, postcss.config.js, svelte.config.js, tailwind.config.js,tsconfig.json, vite.config.ts",
+			"+layout*.svelte": "${basename}*.ts",
+			"+page*.svelte": "${basename}*.ts",
+			"*.svelte": "${capture}.stories.svelte,${capture}.stories.ts, ${capture}.stories.js"
+		},
+		"explorer.fileNesting.expand": false
+	},
+	"extensions": {
+		"recommendations": [
+			"bradlc.vscode-tailwindcss",
+			"antfu.vite",
+			"svelte.svelte-vscode"
+		]
+	}
+}

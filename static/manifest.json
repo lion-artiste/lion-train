@@ -1,0 +1,51 @@
+{
+    "short_name": "LionTrain",
+    "name": "Lion Train",
+    "description": "Free and customizable ear-training games for music producers and mix engineers",
+    "start_url": "/",
+    "icons": [
+        {
+            "src": "/images/meta/android-chrome-192x192.png",
+            "sizes": "192x192",
+            "type": "image/png"
+        },
+        {
+            "src": "/images/meta//android-chrome-512x512.png",
+            "sizes": "512x512",
+            "type": "image/png"
+        }
+    ],
+    "background_color": "#0261ce",
+    "theme_color": "#0261ce",
+    "display": "standalone",
+    "scope": "/",
+    "shortcuts": [
+        {
+            "name": "Big Boosty",
+            "short_name": "Big Boosty",
+            "description": "Find the boosted frequency",
+            "url": "/games/big-boosty",
+            "icons": [
+                { "src": "/images/games/big-boosty/icon.png", "sizes": "192x192" }
+            ]
+        },
+        {
+            "name": "What The Cut",
+            "short_name": "What The Cut",
+            "description": "Find the attenuated frequency",
+            "url": "/games/what-the-cut",
+            "icons": [
+                { "src": "/images/games/what-the-cut/icon.png", "sizes": "192x192" }
+            ]
+        },
+        {
+            "name": "Pantastic",
+            "short_name": "Pantastic",
+            "description": "Find the position of sound in the soundfield",
+            "url": "/games/pantastic",
+            "icons": [
+                { "src": "/images/games/pantastic/icon.png", "sizes": "192x192" }
+            ]
+        }
+    ]
+}

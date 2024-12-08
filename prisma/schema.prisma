@@ -1,0 +1,138 @@
+// This is your Prisma schema file,
+// learn more about it in the docs: https://pris.ly/d/prisma-schema
+
+generator client {
+  provider = "prisma-client-js"
+  binaryTargets = ["native","debian-openssl-1.0.x"]
+}
+
+datasource db {
+  provider = "mysql"
+  url      = env("DATABASE_URL")
+}
+
+// USERS
+
+model User {
+  id              String    @id @unique @default(uuid())
+  name            String?
+  tag             String?   @unique
+
+  email           String?   @unique
+  email_verified  Boolean   @default(false)
+
+  hashed_password String?
+
+  github_id       Int?       @unique
+  google_id       String?    @unique
+  spotify_id      String?    @unique
+
+  blocked         Boolean    @default(false)
+
+  image           String?
+  pixel_avatar    String?    @db.LongText
+
+  date_signup     DateTime?  @default(now())
+
+  admin           Boolean    @default(false)
+  superuser       Boolean    @default(false)
+
+  sfx_volume      Int        @default(2)
+
+  receive_news    Boolean    @default(true)
+
+  scores          Score[]
+  games           GameToUser[]
+  signals         Signal[]
+  news            News[]
+
+  auth_session    Session[]
+}
+
+model GameToUser {
+  id             String @id @unique
+  user_id        String
+  game           String
+
+  user           User   @relation(references: [id], fields: [user_id], onDelete: Cascade)
+
+  @@index([user_id])
+}
+
+model Session {
+  id             String   @id
+  userId         String
+  expiresAt      DateTime
+  user           User     @relation(references: [id], fields: [userId], onDelete: Cascade)
+
+  @@index([userId])
+}
+
+model Signal {
+  id              Int        @id @unique @default(autoincrement())
+  date            DateTime?  @default(now())
+  code            String
+  value           String?
+  userId          String?
+  user            User?     @relation(references: [id], fields: [userId], onDelete: Cascade)
+}
+
+model Token {
+  id             String @id @unique
+  expires        BigInt
+  user_id        String
+}
+
+model ResetToken {
+  id             String @id @unique
+  expires        BigInt 
+  user_id        String
+}
+
+// GAMES
+
+model Score {
+  id             Int        @id @unique @default(autoincrement())
+  game           String
+  points         Int
+  parameters     Json?
+  date           DateTime? @default(now())
+  userId         String
+
+  personal_rank  Int?
+  personal_total Int?
+  world_rank     Int?
+  world_total    Int?
+
+  user         User     @relation(fields: [userId], references: [id], onDelete: Cascade)
+}
+
+model Playlist {
+  id           Int       @id @default(autoincrement())
+  name         String
+  slug         String    @unique
+  description  String?
+  illustration String?
+  default      Boolean   @default(false)
+  sources      Source[]
+}
+
+model Source {
+  id          Int        @id @default(autoincrement())
+  name        String
+  author      String
+  link        String
+  audio       String?
+  audioLink   String?
+  playlists   Playlist[]
+}
+
+model News {
+  id              Int        @id @unique @default(autoincrement())
+  date            DateTime?  @default(now())
+  sent            Boolean    @default(false)
+  title           String?
+  message         String?   @db.LongText
+  authorId        String?
+  author          User?     @relation(references: [id], fields: [authorId], onDelete: SetNull)
+}

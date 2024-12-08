@@ -1,0 +1,15 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@font-face {
+    font-family: "Super Smash TV";
+    src: local("Super Smash TV"),
+        url("/fonts/Super_Smash_TV.ttf") format("opentype");
+}
+
+@font-face {
+    font-family: "Minecraft Standard";
+    src: local("MinecraftStandard"),
+        url("/fonts/MinecraftStandard.otf") format("opentype");
+}
